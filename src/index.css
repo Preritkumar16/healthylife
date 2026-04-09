@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+
+  --color-vitality-primary: #006B54; /* Dark Green from screenshots */
+  --color-vitality-accent: #2DD4BF; /* Vibrant Teal/Green from screenshots */
+  --color-vitality-accent-light: #E6FFFA;
+  
+  --color-surface: #F8FAFC;
+  --color-surface-container-low: #F1F5F9;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-container-highest: #E2E8F0;
+  --color-on-surface: #0F172A;
+  --color-on-surface-variant: #64748B;
+  --color-outline-variant: rgba(15, 23, 42, 0.1);
+
+  --shadow-ambient: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-premium: 0 10px 30px rgba(0, 107, 84, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body antialiased selection:bg-vitality-accent/20;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+
+  .serif {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .signature-gradient {
+    background: linear-gradient(135deg, #2DD4BF 0%, #006B54 100%);
+  }
+
+  .glass-nav {
+    @apply bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm;
+  }
+  
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-sm border border-slate-100 shadow-sm;
+  }
+
+  .tonal-card {
+    @apply bg-white rounded-3xl p-8 transition-all duration-300 hover:shadow-premium border border-slate-100;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #2DD4BF 0%, #006B54 100%);
+    @apply text-white px-8 py-3 rounded-full font-bold transition-transform hover:scale-105 active:scale-95 shadow-md;
+  }
+
+  .btn-secondary {
+    @apply bg-surface-container-low text-on-surface px-8 py-3 rounded-full font-bold transition-all hover:bg-surface-container-highest;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
