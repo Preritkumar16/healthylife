@@ -43,7 +43,7 @@ export const HomeScreen: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-medium"
           >
-            Take care of your health with simple daily plans and tips.
+            Elevate your lifestyle with personalized insights, professional wellness guides, and a community built on the pillars of vital living.
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export const HomeScreen: React.FC = () => {
             transition={{ delay: 0.4 }}
             className="flex flex-wrap items-center justify-center gap-6 pt-4"
           >
-            <button className="btn-primary text-lg px-10 py-4">Start Your Journey</button>
+            <NavLink to="/dashboard" className="btn-primary text-lg px-10 py-4">Start Your Journey</NavLink>
             <button className="btn-secondary bg-white/10 backdrop-blur-md text-white hover:bg-white/20 border border-white/20 text-lg px-10 py-4">Explore Features</button>
           </motion.div>
         </div>
@@ -78,8 +78,8 @@ export const HomeScreen: React.FC = () => {
               <div className="flex items-center gap-2 text-white/80 text-xs font-bold uppercase tracking-widest">
                 <Heart size={16} /> Precision Nutrition
               </div>
-            <h3 className="text-4xl font-display font-extrabold text-white">Good Food</h3>
-              <p className="text-white/70 max-w-md font-medium">Eat right food every day for good energy and health.</p>
+              <h3 className="text-4xl font-display font-extrabold text-white">Nutritional Balance</h3>
+              <p className="text-white/70 max-w-md font-medium">Personalized meal plans designed by experts to fuel your body with clean, organic energy for peak performance.</p>
             </div>
           </div>
 
@@ -89,8 +89,8 @@ export const HomeScreen: React.FC = () => {
               <div className="w-14 h-14 rounded-2xl signature-gradient flex items-center justify-center text-white shadow-lg">
                 <Dumbbell size={28} />
               </div>
-              <h3 className="text-3xl font-display font-extrabold">Daily Exercise</h3>
-              <p className="text-on-surface/50 leading-relaxed">Do exercise every day to stay fit and strong.</p>
+              <h3 className="text-3xl font-display font-extrabold">Functional Exercise</h3>
+              <p className="text-on-surface/50 leading-relaxed">Science-backed workout routines adapted to your goals, from strength training to mobility flows.</p>
             </div>
             <NavLink to="/workouts" className="flex items-center gap-2 text-vitality-primary font-bold hover:gap-4 transition-all mt-8">
               View Workouts <ArrowRight size={20} />
@@ -103,8 +103,8 @@ export const HomeScreen: React.FC = () => {
               <div className="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-lg">
                 <Wind size={28} />
               </div>
-              <h3 className="text-3xl font-display font-extrabold">Mind Peace</h3>
-              <p className="text-on-surface/50 leading-relaxed">Relax mind with easy breathing to stay calm.</p>
+              <h3 className="text-3xl font-display font-extrabold">Mental Clarity</h3>
+              <p className="text-on-surface/50 leading-relaxed">Guided meditations and cognitive exercises to reduce stress and improve daily focus.</p>
             </div>
             <NavLink to="/mindfulness" className="flex items-center gap-2 text-blue-600 font-bold hover:gap-4 transition-all mt-8">
               Start Journal <ArrowRight size={20} />
@@ -114,8 +114,8 @@ export const HomeScreen: React.FC = () => {
           {/* Optimized Recovery */}
           <div className="lg:col-span-2 relative h-[450px] rounded-[2.5rem] overflow-hidden group">
             <img 
-              src="https://www.helpguide.org/wp-content/uploads/2023/02/Sleep-in-Older-Adults.jpeg" 
-              alt="Sleep Bed" 
+              src="https://images.unsplash.com/photo-1505691938895-1758d7eaa511?q=80&w=1200&auto=format&fit=crop" 
+              alt="Bedroom" 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
@@ -124,8 +124,8 @@ export const HomeScreen: React.FC = () => {
               <div className="flex items-center gap-2 text-white/80 text-xs font-bold uppercase tracking-widest">
                 <Moon size={16} /> Restorative Sleep
               </div>
-              <h3 className="text-4xl font-display font-extrabold text-white">Good Sleep</h3>
-              <p className="text-white/70 max-w-md font-medium">Sleep well every night to feel fresh next day.</p>
+              <h3 className="text-4xl font-display font-extrabold text-white">Optimized Recovery</h3>
+              <p className="text-white/70 max-w-md font-medium">Track your circadian rhythms and unlock insights for deeper, more restorative rest cycles every night.</p>
             </div>
           </div>
         </div>
@@ -135,12 +135,12 @@ export const HomeScreen: React.FC = () => {
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center px-6">
         <div className="space-y-12">
           <h2 className="text-5xl font-display font-extrabold tracking-tight">
-            Why choose <span className="text-vitality-accent">HealthyLife</span> ?
+            Why <span className="text-vitality-accent">HealthyLife</span> <br /> Sanctuary?
           </h2>
           
           <div className="space-y-10">
             {[
-              { icon: CheckCircle2, title: 'Doctor Approved', desc: 'Made by doctors with good research.', color: 'bg-green-100 text-green-600' },
+              { icon: CheckCircle2, title: 'Evidence-Based Approach', desc: 'Our protocols are designed by medical professionals and wellness experts using clinical research data.', color: 'bg-green-100 text-green-600' },
               { icon: BarChart3, title: 'Real-Time Biometrics', desc: 'Seamlessly sync with your wearable devices for a 360-degree view of your vital health metrics.', color: 'bg-blue-100 text-blue-600' },
               { icon: Users2, title: 'Empathetic Community', desc: 'Join thousands of others on the same path, sharing progress and motivating one another daily.', color: 'bg-teal-100 text-teal-600' },
             ].map((feature, i) => (
@@ -176,9 +176,9 @@ export const HomeScreen: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {[
-{ name: 'Dr. Raj Patel', role: 'Main Doctor', image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=800&auto=format&fit=crop', bio: 'Helps with body health and long life tips.' },
-{ name: 'Priya Sharma', role: 'Food Expert', image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800&auto=format&fit=crop', bio: 'Knows good food for energy and stomach health.' },
-{ name: 'Amit Singh', role: 'Fitness Coach', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop', bio: 'Trains for strong body and easy movement.' },
+            { name: 'Dr. Julian Vance', role: 'Chief Medical Officer', image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=800&auto=format&fit=crop', bio: 'Specializing in metabolic health and longevity protocols.' },
+            { name: 'Sarah Jenkins', role: 'Head of Nutrition', image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800&auto=format&fit=crop', bio: 'Expert in plant-based performance and gut microbiome health.' },
+            { name: 'Marcus Thorne', role: 'Performance Coach', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop', bio: 'Former Olympic trainer focused on functional strength and mobility.' },
           ].map((expert, i) => (
             <motion.div 
               key={i}
@@ -208,8 +208,8 @@ export const HomeScreen: React.FC = () => {
       <section className="px-6">
         <div className="bg-surface-container-low rounded-[4rem] p-16 md:p-24 flex flex-col lg:flex-row items-center gap-16 border border-outline-variant">
           <div className="flex-1 space-y-6 text-center lg:text-left">
-            <h2 className="text-5xl font-display font-extrabold tracking-tight">Weekly Health Tips</h2>
-            <p className="text-on-surface/50 max-w-lg font-medium">Join thousands for weekly health tips every Sunday.</p>
+            <h2 className="text-5xl font-display font-extrabold tracking-tight">The <span className="serif italic font-light">Weekly</span> Sanctuary</h2>
+            <p className="text-on-surface/50 max-w-lg font-medium">Join 50,000+ subscribers receiving science-backed wellness protocols and exclusive sanctuary updates every Sunday.</p>
           </div>
           <div className="flex-1 w-full max-w-md">
             <form className="flex flex-col sm:flex-row gap-4">
@@ -227,11 +227,11 @@ export const HomeScreen: React.FC = () => {
 
       {/* CTA Section */}
       <section className="mx-6 signature-gradient rounded-[4rem] p-16 md:p-24 text-center text-white space-y-10">
-            <h2 className="text-5xl md:text-7xl font-display font-extrabold tracking-tight">Ready to start healthy life?</h2>
-        <p className="text-xl text-white/80 max-w-2xl mx-auto">Join HealthyLife and start your health journey today.</p>
-        <button className="bg-white text-vitality-primary px-12 py-5 rounded-full font-extrabold text-xl hover:scale-105 transition-transform shadow-xl">
+        <h2 className="text-5xl md:text-7xl font-display font-extrabold tracking-tight">Ready to transform your life?</h2>
+        <p className="text-xl text-white/80 max-w-2xl mx-auto">Join HealthyLife today and get your first 30 days of premium access completely free.</p>
+        <NavLink to="/dashboard" className="inline-block bg-white text-vitality-primary px-12 py-5 rounded-full font-extrabold text-xl hover:scale-105 transition-transform shadow-xl">
           Get Started Now
-        </button>
+        </NavLink>
       </section>
     </div>
   );

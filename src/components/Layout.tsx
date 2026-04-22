@@ -16,6 +16,7 @@ import {
 
 const navItems = [
   { path: '/', label: 'Home', icon: Home },
+  { path: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { path: '/diet', label: 'Diet', icon: Leaf },
   { path: '/workouts', label: 'Exercise', icon: Dumbbell },
   { path: '/mindfulness', label: 'Mental Health', icon: Brain },
@@ -25,6 +26,11 @@ const navItems = [
 export const Layout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const isDashboard = location.pathname === '/dashboard';
+
+  if (isDashboard) {
+    return <>{children}</>;
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-surface">
@@ -148,7 +154,7 @@ export const Layout: React.FC<{ children?: React.ReactNode }> = ({ children }) =
             <h4 className="font-bold mb-6 text-on-surface">Newsletter</h4>
             <div className="space-y-4">
               <p className="text-xs text-on-surface/50 leading-relaxed">
-              Join our weekly health digest for simple wellness tips.
+                Join our weekly sanctuary digest for exclusive wellness protocols.
               </p>
               <div className="flex gap-2">
                 <input 
@@ -165,7 +171,7 @@ export const Layout: React.FC<{ children?: React.ReactNode }> = ({ children }) =
         </div>
         <div className="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-slate-50 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[10px] text-on-surface/30 uppercase tracking-widest font-bold">
-            © 2024 HealthyLife. All rights reserved.
+            © 2024 HealthyLife Sanctuary. All rights reserved.
           </p>
           <div className="flex gap-8 text-[10px] text-on-surface/30 uppercase tracking-widest font-bold">
             <a href="#" className="hover:text-vitality-accent transition-colors">Privacy Policy</a>
